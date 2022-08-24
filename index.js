@@ -18,7 +18,6 @@ let config = {
     guild: "",
 }
 
-
 client.on("ready", async () => {
     await fs.readFileSync(path.join(__dirname, "db.json"))
     console.log(`Bot booted up!`);
