@@ -1,33 +1,39 @@
-# Discord Count Bot
+# Discord Bot
 
-This is a simple Discord bot that allows users to send messages in a designated channel to add to a count. The bot will keep track of the current count, as well as the top score for the day. The top 10 scores for the day will be displayed in a separate channel at midnight. If a user sends a message that is not a number, they will receive a message and their count will be reset to 0.
+This is a Discord bot that tracks messages in a specific channel and updates a leaderboard based on the number of messages a user has sent. It also updates a topic in the tracking channel with the current top score.
 
-## Requirements
+## Getting Started
 
-- Node.js 12.0.0 or later
-- npm 6.14.4 or later
-- A Discord bot account and token
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-## Set Up
+### Prerequisites
 
-1. Clone the repository to your local machine
-2. Run `npm install` to install the necessary dependencies
-3. Create a `.env` file in the root directory of the project and add the following variables:
-    - `TOKEN`: The Discord bot token
-    - `PREFIX`: The desired command prefix for the bot (default is `+`)
-    - `COUNT_CHANNEL`: The ID of the channel where users will send messages to add to the count
-    - `LB_CHANNEL`: The ID of the channel where the top 10 scores will be displayed
-    - `FAIL_ROLE`: The ID of the role that will be applied to users who send a message that is not a number
-    - `GUILD`: The ID of the Discord server
-4. Run the bot using `node index.js`
+- [Node.js](https://nodejs.org/)
+- [Discord.js](https://discord.js.org/)
 
-## Usage
+### Installing
 
-- To add to the count, send a message with a number in the designated count channel.
-- To view the current count and top score, use the `+count` command.
-- To view the top 10 scores for the day, use the `+top` command.
+1. Clone the repository
+2. Install the dependencies by running `npm install` in the project directory
+3. Set up a [Discord bot](https://discord.com/developers/docs/intro) and copy the token
+4. Rename the `config.example.json` file to `config.json` and fill in the relevant information:
+   - `token`: the Discord bot token
+   - `prefix`: the command prefix for the bot
+   - `countchannel`: the ID of the channel where messages should be counted
+   - `lbchannel`: the ID of the channel where the leaderboard should be posted
+   - `failrole`: the ID of the role to be given to users who fail to meet the daily message count requirement
+   - `guild`: the ID of the Discord server
+5. Run the bot using `node index.js`
 
-## Credits
+## Built With
 
-- [discord.js](https://github.com/discordjs/discord.js)
-- [dotenv](https://github.com/motdotla/dotenv)
+- [Node.js](https://nodejs.org/) - JavaScript runtime
+- [Discord.js](https://discord.js.org/) - Discord API library for Node.js
+
+## Author
+
+- **invaliduser231** - [GitHub profile](https://github.com/invaliduser231)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
