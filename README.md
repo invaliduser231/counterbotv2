@@ -16,7 +16,7 @@ These instructions will get you a copy of the project up and running on your loc
 1. Clone the repository
 2. Install the dependencies by running `npm install` in the project directory
 3. Set up a [Discord bot](https://discord.com/developers/docs/intro) and copy the token
-4. Rename the `config.example.json` file to `config.json` and fill in the relevant information:
+4. Go to index.js and search for the config object:
    - `token`: the Discord bot token
    - `prefix`: the command prefix for the bot
    - `countchannel`: the ID of the channel where messages should be counted
